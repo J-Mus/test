@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+  <link
+    rel = "stylesheet"
+    href = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity = "sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin = ""/>
+  <script
+    src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity = "sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin = ""></script>
+
+  <style>
+    #mapid { height: 640px; }
+  </style>
+
+</head>
+<body>
+    <div id = "mapid"></div>
+    <script>
+        var mymap = L.map('mapid').setView([51.448, -2.609], 13);    // add latitude and longitude here
+        const attribution =  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const tiles = L.tileLayer(tileUrl, { attribution });
+        tiles.addTo(mymap);
+        //L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token = {accessToken}', {
+        //  L.tileLayer('https://api.mapbox.com/styles/j-mus/ckt1wycqu1fkd17r8nju5o07n/{id}/tiles/{z}/{x}/{y}/j-mus?access_token = {accessToken}',{
+        //    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        //    maxZoom: 18,
+            //id: 'mapbox.streets-v11',
+        //    id: 'mapbox.satellite',
+            //mapbox://styles/
+            //id: mapbox/satellite-v9
+        //    z: 1,
+        //    x: 1,
+        //    y: 0,
+        //    tileSize: 512,
+        //    zoomOffset: -1,
+        //    accessToken: 'pk.eyJ1Ijoiai1tdXMiLCJhIjoiY2t0MXdpanpmMGVuczJvcGdlbGZpaTBhbyJ9.wBjSol1yLwWKVNg8SbA4dA'
+        //    }).addTo(mymap);
+        var marker1 = L.marker([51.447559,-2.614112]).addTo(mymap);   // [audio mp3="undefined"][/audio]
+        marker1.bindPopup(" <b>Sounds & sources:</b><br> Birds on balconies, seabirds, cars, wind, road traffic <br><br> <b>Emotions, moods, quotes:</b><br> ‘Considering we are in the centre of the city, we’ve got big roads on both sides, it’s like a nice little oasis here. There is a lot of plants, trees, flowers, lots of wildlife, birds on the balcony… Doesn’t get busy with people either.’ ").openPopup();
+
+        var marker2 = L.marker([51.447,-2.617833]).addTo(mymap);    // SoundscapeViews0074.mp3
+        marker2.bindPopup(" <b>Sounds & sources:</b><br> Masts, sails flapping, builders banging, knocking, paper with the wind whacking away, loud gulls, people brunching, conversations, wind, air, footsteps <br><br> <b>Emotions, moods, quotes:</b> 'Quite beautiful and very relaxing. There is a security about the constant sound… that I’m connecting with the rest of the world. Not thinking about all the issues of the world at large at the moment. That’s why I came to the harbour.’ <br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/SoundscapeViews0074.mp3 height=110 frameborder=1 </iframe> ").openPopup();
+
+        var marker3 = L.marker([51.4467488,-2.6160824]).addTo(mymap);   // SoundscapeViews0077.mp3
+        marker3.bindPopup("  <b>Sounds & sources:</b><br> Sound of water, boats chinking, construction traffic, people talking, paddleboats, canoes, birds <br><br> <b>Emotions, moods, quotes:</b> 'Very vibrant, people having a very nice time on a beautiful day in Bristol. It feels like it’s very much a working area, as opposed to the lot of other quaysides.’<br> <br> <iframe src= https://buildinginstruments.com/wp-content/uploads/2021/09/SoundscapeViews0077.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker4 = L.marker([51.446833,-2.616]).addTo(mymap);    // SoundscapeViews0076.mp3
+        marker4.bindPopup("  <b>Sounds & sources:</b><br> Birds chirping, wind on the water, waves lapping, seagulls squawking, traffic on the road, children playing <br><br> <b>Emotions, moods, quotes:</b> 'I heard children playing that made me feel happy, the waves lapping… very calming, I then heard a seagull squawking and that got my back up… seagulls here try to steal food!’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/SoundscapeViews0076.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker5 = L.marker([51.447583,-2.614806]).addTo(mymap);   // SoundscapeViews0078.mp3
+        marker5.bindPopup("  <b>Sounds & sources:</b><br> Road traffic noise, ticking of masts, bicycle, breath of wind, silence, lorries <br><br> <b>Emotions, moods, quotes:</b> 'Everything really is very very quiet here, just peaceful, there’s a breath of wind… I can just hear the traffic, lorries going up on that road… I can’t say anything negative about it, I like this sort of quiet… I didn’t even notice the birds.’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/SoundscapeViews0078.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker6 = L.marker([51.447833,-2.598139]).addTo(mymap);   // ZOOM0094_95_deeplistening.mp3
+        marker6.bindPopup("  <b>Sounds & sources:</b><br> Metal work, conversations, cars, wind, seagull, people <br><br> <b>Emotions, moods, quotes:</b> 'A very lively, bustling sounding atmosphere. It was quite nice to have the sound of conversations but also the sounds of the working harbour, metal clanking… There wasn’t a moment of silence there.’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0094_95_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker7 = L.marker([51.447444,-2.599389]).addTo(mymap);   // ZOOM0096_97_deeplistening.mp3
+        marker7.bindPopup("  <b>Sounds & sources:</b><br> Creaking of the boat, noise of car engine, humming generator, sound of wood and rope, children, seagulls, people, chatter <br><br> <b>Emotions, moods, quotes:</b> 'My favourite sound was the creaking of the mast of the boat, which was really distinctive, the sound of wood and rope I don’t think I ever heard the sound of a creaking mast… it’s quite an unusual sound… And the sound of the seagulls, it reminds me of the beach!’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0096_97_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker8 = L.marker([51.44725,-2.602056]).addTo(mymap);    // ZOOM0098_deeplistening.mp3
+        marker8.bindPopup("  <b>Sounds & sources:</b><br> Cars, footsteps, people talking, seagulls, water, high-heels, laughing, chatter, crunching on the ground, wind, music from the boats <br><br> <b>Emotions, moods, quotes:</b> 'Pretty relaxed atmosphere… Felt like you’re surrounded by people but also on your own. Not like the very centre of a bustle-y city… Even though the birds are loud but it’s comforting to hear.’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0098_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker9 = L.marker([51.447778,-2.604444]).addTo(mymap);   // ZOOM0099_deeplistening.mp3
+        marker9.bindPopup("  <b>Sounds & sources:</b><br> People walking, running, someone drilling, children’s voices, seagulls, wind blowing around, quite talking, pushchairs, talking, boats <br><br> <b>Emotions, moods, quotes:</b> 'Very peaceful, very peaceful. This unpleasant drilling is a one-off thing, it doesn’t bother me, you accept that things gotta get done… The sound of the harbourside is one of people talking, children laughing and perhaps a boat on the river.’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0099_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker10 = L.marker([51.448472,-2.606444]).addTo(mymap);    // ZOOM0100_deeplistening.mp3
+        marker10.bindPopup("  <b>Sounds & sources:</b><br> Hum of traffic, boats, machine, pigeons, people walking, talking, seagulls, motorbike passing, wind in the trees, foreign languages <br><br> <b>Emotions, moods, quotes:</b> 'Busy, not so relaxing, except when the wind was in the trees, that was more relaxing… and I like to hear the foreign languages. I always like that in a city.’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0100_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        var marker11 = L.marker([51.448509,-2.606219]).addTo(mymap);    // ZOOM0100_deeplistening.mp3
+        marker11.bindPopup("  <b>Sounds & sources:</b><br> Boats moving against the quayside, passengers getting onto the boat, chatter, seagulls, people counting clicker, boats passing by, water <br><br> <b>Emotions, moods, quotes:</b> 'Pretty peaceful but slightly chaotic. Peaceful birds sounds, boat lapping up against the side…. Then people getting onto the boat, chatting…I don’t know if that’s negative but it’s disrupting…’<br> <br> <iframe src=https://buildinginstruments.com/wp-content/uploads/2021/09/ZOOM0101_deeplistening.mp3 height=110 frameborder=1 </iframe>").openPopup();
+
+        // TODO
+        // could try to add extrium mapping
+        // https://environment.data.gov.uk/spatialdata/road-noise-laeq-16h-england-round-3/wfs
+        // https://environment.data.gov.uk/spatialdata/road-noise-laeq-16h-england-round-3/wms    ... try this: https://leafletjs.com/examples/wms/wms.html
+        // two data types: https://support.environment.data.gov.uk/hc/en-gb/articles/360000921077-Why-do-I-get-a-error-message-when-loading-WMS-or-WFS-data-
+
+        // add the sound files: https://link.springer.com/content/pdf/10.1007/s42489-019-00006-2.pdf
+
+        // add the image of the location into the iframe (photos need to already be hosted in wordpress)
+        // use satellite map
+
+
+    </script>
+
+</body>
+</html>
